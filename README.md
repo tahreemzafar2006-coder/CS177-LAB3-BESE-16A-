@@ -6,7 +6,7 @@
 
 **Abstraction in Python**:Abstraction in Python is mainly supported through **classes and abstract classes**. By using the `abc` (Abstract Base Class) module, we can define abstract methods that only provide a blueprint, leaving the actual implementation to child classes. This way, a programmer can hide unnecessary details and only show the essential features. For example, you can define a general "Vehicle" class without worrying about how each vehicle type works internally. It makes code cleaner, more organized, and easier to extend. In simple words, abstraction in Python helps us focus on what a thing does rather than how it does it.
 
-###  Comparison Table
+  Comparison Table
 
 | Feature          | Assembly Example | Python Example | Notes                                           |
 |------------------|------------------|----------------|------------------------------------------------|
