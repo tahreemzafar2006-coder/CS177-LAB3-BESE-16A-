@@ -1,0 +1,57 @@
+section .data
+adding:     db 'Hello, This is calculator for adding 4 and 3',10   
+	addingLen:  equ $-adding          
+  multiply:     db 'Product of 5x1:',                      
+  multiplyLen   equ $-multiply
+  newline   db 10
+  sum:      db 'Result:'
+  sumLen:   equ $-sum
+  product:     db 'Result:',10
+  productLen:  equ $-product
+  result db 0
+  
+  
+section .text
+	global _start
+
+_start:
+	
+ 
+	mov eax,4           
+	mov ebx,1            
+	mov ecx,adding       
+	mov edx,addingLen    
+	int 0x80             
+
+	mov eax, 4          
+	mov ebx, 1           
+	mov ecx, sum
+	mov edx, sumLen 
+	int 0x80
+	
+  
+  mov al, 4
+  add al, 3                 
+  
+  add al, '0'                  
+  
+  mov [result], al
+	mov eax, 4          
+	mov ebx, 1           
+	mov ecx, result
+	mov edx, 1 
+	int 0x80              
+
+	mov eax, 4          
+	mov ebx, 1           
+	mov ecx, newline
+	mov edx, 1 
+	int 0x80
+
+	mov eax, 4        
+	mov ebx, 1          
+	mov ecx, multiply
+	mov edx, multiplyLen 
+	int 0x80
+	
+ 
